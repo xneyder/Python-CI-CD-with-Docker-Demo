@@ -119,6 +119,7 @@ def main():
         time.sleep(sleep_time)
         for filename in file_list:
             load_file(filename)
+            os.rename(filename,filename+"_")
 
 
 
