@@ -84,7 +84,7 @@ def load_file(filename):
         db.commit()
     except mysql.connector.Error as err:
         app_logger.error(err)
-        return False
+        raise Exception(err)
     app_logger.info('{rowcount} records were inserted to CISCO_PCRF_CPU.'
                     .format(rowcount=cursor.rowcount))
     return True
