@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+        db:
+                build:
+                        dockerfile: Dockerfile
+                        context: ./mysql
+                restart: always
+                ports:
+                        - "3307:3306"
+                environment:
+                        - MYSQL_ROOT_PASSWORD=YiP0hj17%
+                        - MYSQL_USER=danielj
+                        - MYSQL_PASSWORD=danielj
+        app:
+                build:
+                        dockerfile: Dockerfile
+                        context: ./app
+                environment:
+                        - DB_HOST=db
+                        - DB_NAME=CISCO_PCRF
+                        - DB_USER=root
+                        - DB_PASSWORD=WWlQMGhqMTcl
+                depends_on:
+                        - "db"
+
+

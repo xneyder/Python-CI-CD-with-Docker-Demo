@@ -77,7 +77,7 @@ def load_file(filename):
     pmm_datetime=datetime.strptime(filename.split('-')[-2],'%Y%m%d%H%M')
     df=pd.read_csv(filename)
     sql = """INSERT INTO CISCO_PCRF_CPU (PMM_DATETIME, NE_NAME, CPU_ID, STEAL,
-        IDLE, CPU_USER, SYSTEM, WAIT) VALUES ('{pmm_datetime}', 
+        IDLE, CPU_USER, _SYSTEM, WAIT) VALUES ('{pmm_datetime}', 
         %s, %s, %s, %s, %s, %s, %s)""".format(pmm_datetime=pmm_datetime)
     try:
         cursor.executemany(sql, df.values.tolist())
@@ -92,7 +92,7 @@ def load_file(filename):
 
 #Main function
 def main():
-    sleep_time=10
+    sleep_time=30
     app_logger=logger.get_logger("main")
     app_logger.info("Starting {script}".format(script=sys.argv[0]))
     #Validate the line arguments
