@@ -29,7 +29,7 @@ class TestParser(unittest.TestCase):
         Test the number of records
         """
         #Number of records
-        self.assertEqual(len(data),128, "Incorrect number of records")
+        self.assertEqual(len(data),129, "Incorrect number of records")
 
     def test_data_loaded(self):
         """
@@ -51,5 +51,7 @@ class TestParser(unittest.TestCase):
 
 if __name__ == "__main__":
     data=[]
-    unittest.main()
+    import xmlrunner
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
+    #unittest.main()
 
