@@ -8,6 +8,8 @@ name = "pypi"
 [packages]
 pandas = "*"
 mysql-connector-python = "*"
+"nose2" = "*"
+nose = "*"
 
 [requires]
 python_version = "2.7"
