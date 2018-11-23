@@ -13,7 +13,7 @@ services:
                         - MYSQL_PASSWORD=danielj
         app:
                 build:
-                        dockerfile: Dockerfile
+                        dockerfile: Dockerfile.qa
                         context: ./app
                 environment:
                         - DB_HOST=db
