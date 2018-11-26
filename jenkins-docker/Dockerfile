@@ -14,6 +14,7 @@ RUN cat main.cf >> /etc/postfix/main.cf
 RUN postmap /etc/postfix/sasl_passwd
 RUN chown root:postfix /etc/postfix/sasl_passwd
 RUN chmod 640 /etc/postfix/sasl_passwd
-CMD ["postfix", "-c", "/etc/postfix", "start"]
+RUN postfix -c /etc/postfix start
+#CMD ["postfix", "-c", "/etc/postfix", "start-fg"]
 
 
