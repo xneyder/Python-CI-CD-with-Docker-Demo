@@ -14,10 +14,11 @@ node {
        		     	subject: 'project build failed',
 			to: 'xneyder@gmail.com'
 		throw err
-	} finally {
-		junit '/tmp/test/*xml'
-		junit '/var/jenkins_home/workspace/ython-CI-CD-with-Docker-Demo_dev/app/tests/integration/test-reports/*xml'
-	}
+	} 
+//	finally {
+//		junit '/tmp/test/*xml'
+//		junit '/var/jenkins_home/workspace/ython-CI-CD-with-Docker-Demo_dev/app/tests/integration/test-reports/*xml'
+//	}
 }
 
 
