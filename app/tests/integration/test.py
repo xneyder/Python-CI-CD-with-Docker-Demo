@@ -29,7 +29,7 @@ class TestParser(unittest.TestCase):
         Test the number of records
         """
         #Number of records
-        self.assertEqual(len(data),129, "Incorrect number of records")
+        self.assertEqual(len(data),130, "Incorrect number of records")
 
     def test_data_loaded(self):
         """
