@@ -15,16 +15,19 @@ services:
                 build:
                         dockerfile: Dockerfile
                         context: ./app
+                container_name: app
                 environment:
                         - DB_HOST=db
                         - DB_NAME=CISCO_PCRF
                         - DB_USER=root
                         - DB_PASSWORD=WWlQMGhqMTcl
+                volumes:
+                        - ./app/tests/integration/test-reports:/app/tests/integration/test-reports
                 depends_on:
                         - "db"
                 command: >
                         sh -c "./wait-for-it.sh db:3306 &&
                                 cd tests/integration &&
-                                pipenv run python -m unittest discover"
+                                pipenv run python test.py"
 
 

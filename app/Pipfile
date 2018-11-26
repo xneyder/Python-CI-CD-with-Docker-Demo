@@ -8,6 +8,11 @@ name = "pypi"
 [packages]
 pandas = "*"
 mysql-connector-python = "*"
+<<<<<<< HEAD
+=======
+"nose2" = "*"
+nose = "*"
+>>>>>>> dev
 xmlrunner = "*"
 
 [requires]
