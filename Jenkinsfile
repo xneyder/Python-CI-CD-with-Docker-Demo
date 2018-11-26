@@ -4,7 +4,6 @@ node {
 			checkout scm
 		stage 'Integration tests '
 			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
-
 	}
 	catch(err) {
 			mail body: "project build error is here: ${env.BUILD_URL}" ,
