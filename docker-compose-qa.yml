@@ -25,6 +25,6 @@ services:
                 command: >
                         sh -c "./wait-for-it.sh db:3306 &&
                                 cd tests/integration &&
-                                pipenv run python -m unittest discover"
+                                pipenv run python test.py"
 
 
