@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<testsuite errors="1" failures="0" name="TestParser-20181123121351" tests="3" time="0.001">
+<testsuite errors="1" failures="0" name="TestParser-20181126204935" tests="3" time="0.000">
 	<testcase classname="TestParser" name="test_data_loaded" time="0.000"/>
 	<testcase classname="TestParser" name="test_data_no_expected" time="0.000"/>
 	<testcase classname="TestParser" name="test_num_records" time="0.000">
