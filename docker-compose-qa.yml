@@ -15,6 +15,7 @@ services:
                 build:
                         dockerfile: Dockerfile
                         context: ./app
+                container_name: app
                 environment:
                         - DB_HOST=db
                         - DB_NAME=CISCO_PCRF
