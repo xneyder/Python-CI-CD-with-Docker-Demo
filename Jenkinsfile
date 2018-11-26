@@ -14,6 +14,8 @@ node {
        		     	subject: 'project build failed',
 			to: 'xneyder@gmail.com'
 		throw err
+	} finally {
+		junit 'app/tests/integration/test-reports/*xml'
 	}
 }
 

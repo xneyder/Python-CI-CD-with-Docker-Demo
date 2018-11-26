@@ -21,6 +21,8 @@ services:
                         - DB_NAME=CISCO_PCRF
                         - DB_USER=root
                         - DB_PASSWORD=WWlQMGhqMTcl
+                volumes:
+                        - ./app/tests/integration/test-reports:/app/tests/integration/test-reports
                 depends_on:
                         - "db"
                 command: >
