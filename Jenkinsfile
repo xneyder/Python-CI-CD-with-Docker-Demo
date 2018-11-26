@@ -4,6 +4,7 @@ node {
 			checkout scm
 		stage 'Integration tests '
 			sh "echo ${env.BUILD_URL}"
+
 	}
 	catch(err) {
 			mail body: "project build error is here: ${env.BUILD_URL}" ,
