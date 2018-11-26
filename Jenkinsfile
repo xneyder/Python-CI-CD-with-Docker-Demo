@@ -8,10 +8,10 @@ node {
 
 	}
 	catch(err) {
-			mail body: "project build error is here: ${env.BUILD_URL}" ,
+			mail body: "project test error is here: ${env.BUILD_URL}" ,
        		     	from: 'xneyder@gmail.com',
 			replyTo: 'xneyder@gmail.com',
-       		     	subject: 'project build failed',
+       		     	subject: 'project test failed',
 			to: 'xneyder@gmail.com'
 		throw err
 	} 
