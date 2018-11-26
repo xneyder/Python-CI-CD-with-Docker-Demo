@@ -22,7 +22,7 @@ services:
                         - DB_USER=root
                         - DB_PASSWORD=WWlQMGhqMTcl
                 volumes:
-                        - ./app/tests/integration/test-reports:/app/tests/integration/test-reports
+                        - ./app/tests/integration/:/app/tests/integration/
                 depends_on:
                         - "db"
                 command: >
