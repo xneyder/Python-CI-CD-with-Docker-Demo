@@ -77,7 +77,7 @@ def load_file(filename):
     pmm_datetime=datetime.strptime(filename.split('-')[-2],'%Y%m%d%H%M')
     df=pd.read_csv(filename)
     sql = """INSERT INTO CISCO_PCRF_CPU (PMM_DATETIME, NE_NAME, CPU_ID, STEAL,
-        IDLE, CPU_USER, SYSTEM, WAIT) VALUES ('{pmm_datetime}', 
+        IDLE, CPU_USER, _SYSTEM, WAIT) VALUES ('{pmm_datetime}', 
         %s, %s, %s, %s, %s, %s, %s)""".format(pmm_datetime=pmm_datetime)
     try:
         cursor.executemany(sql, df.values.tolist())
