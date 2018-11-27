@@ -17,7 +17,7 @@ node {
 		throw err
 	} 
 	finally {
-		junit '/var/lib/jenkins/workspace/ython-CI-CD-with-Docker-Demo_dev/app/tests/integration/test-reports/*xml'
+		junit 'app/tests/integration/test-reports/*xml'
 	}
 }
 
