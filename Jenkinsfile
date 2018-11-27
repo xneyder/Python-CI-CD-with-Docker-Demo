@@ -4,7 +4,8 @@ node {
 			checkout scm
 		stage 'Integration tests '
 			sh 'pwd'
-			sh "sudo docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
+			sh 'id'
+			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
 
 	}
 	catch(err) {
