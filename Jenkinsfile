@@ -5,8 +5,7 @@ node {
 		stage 'Integration tests '
 			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
 		stage 'Deploy'
-			sh 'Deployed locally'
-
+			sh "echo 'Deployed Locally'"
 	}
 	catch(err) {
 			mail body: "project test error is here: ${env.BUILD_URL}" ,
