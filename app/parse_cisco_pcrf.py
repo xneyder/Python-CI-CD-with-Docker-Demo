@@ -92,7 +92,7 @@ def load_file(filename):
 
 #Main function
 def main():
-    sleep_time=30
+    sleep_time=10
     app_logger=logger.get_logger("main")
     app_logger.info("Starting {script}".format(script=sys.argv[0]))
     #Validate the line arguments
@@ -119,7 +119,7 @@ def main():
         time.sleep(sleep_time)
         for filename in file_list:
             load_file(filename)
-            os.rename(filename,filename+"_")
+            #os.rename(filename,filename+"_")
 
 
 
