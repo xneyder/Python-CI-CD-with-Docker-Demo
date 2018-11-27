@@ -4,7 +4,7 @@ node {
 			checkout scm
 		stage 'Integration tests '
 			sh 'pwd'
-			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
+			sh "sudo docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
 
 	}
 	catch(err) {
@@ -15,10 +15,9 @@ node {
 			to: 'xneyder@gmail.com'
 		throw err
 	} 
-//	finally {
-//		junit '/tmp/test/*xml'
-//		junit '/var/jenkins_home/workspace/ython-CI-CD-with-Docker-Demo_dev/app/tests/integration/test-reports/*xml'
-//	}
+	finally {
+		junit './app/tests/integration/test-reports/*xml'
+	}
 }
 
 
