@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # parse_cisco_pcrf.py
+
 #
 # Description: Demo for CI/CD
 #       This process runs on the background constanly checking the
@@ -29,6 +30,7 @@
 ###########################################################################
 
 import sys
+
 import mysql.connector
 import glob
 import os
