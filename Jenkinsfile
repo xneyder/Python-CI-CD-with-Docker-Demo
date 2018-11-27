@@ -3,9 +3,7 @@ node {
 		stage 'Checkout'
 			checkout scm
 		stage 'Integration tests '
-			sh 'pwd'
 			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
-			sh "ls ./app/tests/integration/test-reports/*xml"
 
 	}
 	catch(err) {
