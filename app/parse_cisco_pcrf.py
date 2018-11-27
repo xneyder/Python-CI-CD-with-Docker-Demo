@@ -30,7 +30,6 @@
 ###########################################################################
 
 import sys
-
 import mysql.connector
 import glob
 import os
