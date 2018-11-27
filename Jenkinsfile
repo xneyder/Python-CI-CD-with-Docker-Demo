@@ -5,6 +5,7 @@ node {
 		stage 'Integration tests '
 			sh 'pwd'
 			sh 'id'
+
 			sh "docker-compose -f docker-compose-qa.yml up --force-recreate --abort-on-container-exit --build"
 
 	}
