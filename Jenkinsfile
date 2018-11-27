@@ -11,7 +11,7 @@ node {
        		     	from: 'xneyder@gmail.com',
 			replyTo: 'xneyder@gmail.com',
        		     	subject: 'project test failed',
-			to: 'xneyder@gmail.com'
+			to: 'danielj@teoco.com'
 		throw err
 	} 
 	finally {
